@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TVY-SL-Hiu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Browser Lite-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="broWser" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pg1-mD-FLL">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rI3-Ro-98F">
+                                <rect key="frame" x="20" y="98" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pg1-mD-FLL" secondAttribute="bottom" id="GXs-Bq-WUQ"/>
+                            <constraint firstItem="Pg1-mD-FLL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Usn-Uc-pS7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pg1-mD-FLL" secondAttribute="trailing" id="cwA-pW-wrH"/>
+                            <constraint firstItem="rI3-Ro-98F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fwK-sZ-Kfb"/>
+                            <constraint firstItem="Pg1-mD-FLL" firstAttribute="top" secondItem="rI3-Ro-98F" secondAttribute="bottom" constant="8" id="gEY-V7-kda"/>
+                            <constraint firstItem="rI3-Ro-98F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="jZX-Nq-2Lu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rI3-Ro-98F" secondAttribute="trailing" constant="20" id="jpY-yO-F3O"/>
+                            <constraint firstItem="Pg1-mD-FLL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="ywW-eZ-nP7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Browser Lite" id="gnE-w0-udR">
+                        <barButtonItem key="leftBarButtonItem" enabled="NO" title="Back" image="arrow.left" catalog="system" id="lg2-Dj-QZz">
+                            <connections>
+                                <action selector="backAction:" destination="BYZ-38-t0r" id="bfH-zy-BZu"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" image="arrow.right" catalog="system" id="uzX-u3-tWa">
+                            <connections>
+                                <action selector="searchAction:" destination="BYZ-38-t0r" id="Bqs-1k-WQF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="backOutlet" destination="lg2-Dj-QZz" id="vrs-Mx-bMK"/>
+                        <outlet property="searchOutlet" destination="uzX-u3-tWa" id="iEl-0x-zzS"/>
+                        <outlet property="textFieldOutlet" destination="rI3-Ro-98F" id="2A8-Th-zwT"/>
+                        <outlet property="window" destination="Pg1-mD-FLL" id="kqZ-gX-M6w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852.17391304347836" y="113.83928571428571"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UgT-bu-1pX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TVY-SL-Hiu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="66e-jx-9zG">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="G7E-Q2-ooU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFj-B6-85V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="113.83928571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+        <image name="arrow.right" catalog="system" width="128" height="98"/>
+    </resources>
+</document>
