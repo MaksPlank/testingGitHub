@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var backOutlet: UIBarButtonItem!
     @IBOutlet weak var window: WKWebView!
     
-    let link = "https://google.com"
+    let link = "https://yandex.ru"
     
     
     
